@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-teamsoft-DAM"
+		},
+		"LS_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_ASQL_AdventureWorks_connectionString": {
+			"value": ""
+		},
+		"LS_ASQL_Integracion_connectionString": {
+			"value": ""
+		},
+		"LS_ASQL_Tailspin_connectionString": {
+			"value": ""
+		},
+		"LS_S3_secretAccessKey": {
+			"value": ""
+		},
+		"LS_SQL_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://dblacademyadls.dfs.core.windows.net/"
+		},
+		"LS_S3_properties_typeProperties_accessKeyId": {
+			"value": "AKIAWHQSER2DT3HU3OO6"
+		}
+	}
+}
