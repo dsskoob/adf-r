@@ -1,0 +1,9 @@
+{
+	"name": "adf-teamsoft-DAM",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bf5527fd-7e2a-471b-9d8a-8866baa86834",
+		"tenantId": "9d524a39-30ac-4a41-9e2f-dd2563dbc78f"
+	}
+}

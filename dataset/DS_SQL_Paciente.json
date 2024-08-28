@@ -1,0 +1,31 @@
+{
+	"name": "DS_SQL_Paciente",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "codigo_paciente",
+				"type": "char"
+			},
+			{
+				"name": "nombre",
+				"type": "varchar"
+			},
+			{
+				"name": "edad",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "consultas",
+			"table": "paciente"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

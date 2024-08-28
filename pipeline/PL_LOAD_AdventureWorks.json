@@ -1,0 +1,103 @@
+{
+	"name": "PL_LOAD_AdventureWorks",
+	"properties": {
+		"activities": [
+			{
+				"name": "PL_LOAD_Prod_Mst",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_LOAD_AdventureWorks_Grupo",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"Grupo": "Produccion-Mst"
+					}
+				}
+			},
+			{
+				"name": "PL_LOAD_Prod_Trn",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "PL_LOAD_Prod_Mst",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_LOAD_AdventureWorks_Grupo",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"Grupo": "Produccion-Trn"
+					}
+				}
+			},
+			{
+				"name": "PL_LOAD_Vta_Mst",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_LOAD_AdventureWorks_Grupo",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"Grupo": "Venta-Mst"
+					}
+				}
+			},
+			{
+				"name": "PL_LOAD_Vta_Trn",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "PL_LOAD_Vta_Mst",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_LOAD_AdventureWorks_Grupo",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"Grupo": "Venta-Trn"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "Módulo 5"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-08-24T16:38:40Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

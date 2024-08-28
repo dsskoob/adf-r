@@ -1,0 +1,16 @@
+{
+	"name": "DS_ASQL_AdventureWorkd_Data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL_AdventureWorks",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Módulo 5"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
