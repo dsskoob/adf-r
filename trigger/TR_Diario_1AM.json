@@ -9,6 +9,12 @@
 					"referenceName": "PL_DATA_SQL_to_ADLS",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "PL_LOAD_DimCustomer",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
